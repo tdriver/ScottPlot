@@ -1,16 +1,16 @@
 ﻿namespace WinForms_Demo;
 
-static class Program
+internal static class Program
 {
     [STAThread]
-    static void Main()
+    private static void Main()
     {
         Application.EnableVisualStyles();
         ApplicationConfiguration.Initialize();
         Application.EnableVisualStyles();
 
         // use this to quickly launch a test Form while developing
-        if (true && Environment.MachineName == "DESKTOP-L7MMAB7")
+        if (true && Environment.MachineName == "TED-PC")
         {
             Demos.DraggableCallout window = new() { StartPosition = FormStartPosition.CenterScreen };
             Application.Run(window);
